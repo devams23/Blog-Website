@@ -15,5 +15,6 @@ Below is the step-by-step instructions on how to install and set up my project.
 
 ```bash
 git clone https://github.com/sdevam6990/Blog-Website.git
+cd Blog-Website
 npm install
 node index.js
