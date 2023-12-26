@@ -29,7 +29,7 @@ app.get("/createblog", (req, res) => {
 });
 //-------------------------------------------------------------------
 app.get("/read/:id", (req, res) => {
-  res.sendFile(__dirname + `/public/index${req.params.id}.html`);
+  res.sendFile(__dirname + `/public/html/index${req.params.id}.html`);
 });
 //-------------------------------------------------------------------
 app.post("/submit", (req, res) => {
@@ -42,7 +42,7 @@ app.post("/submit", (req, res) => {
 
   var html_con = generateHtml(title, content);
 
-  fs.writeFile(`public/index${x}.html`, html_con, function (err) {
+  fs.writeFile(`public/html/index${x}.html`, html_con, function (err) {
     if (err) {
       return console.log(err);
     }
@@ -70,9 +70,9 @@ app.get("/delete/:key", (req,res)=>{
   // Use filter to create a new array without the object with the specified ID
   contents = contents.filter(obj => obj.id !== x);
   console.log(contents);
-  unlink(`public/index${x}.html`, (err) => {
+  unlink(`public/html/index${x}.html`, (err) => {
     if (err) throw err;
-    console.log(`public/index${x}.html was deleted`);
+    console.log(`public/html/index${x}.html was deleted`);
   });
   res.redirect("/");
 });
@@ -89,7 +89,7 @@ app.post("/change/:key", (req,res)=>{
   setdetails(contents ,x ,req.body["content"], req.body["title"]);
   console.log(contents);
   var html_con = generateHtml(req.body["title"], req.body["content"]);
-  fs.writeFile(`public/index${x}.html`, html_con, function (err) {
+  fs.writeFile(`public/html/index${x}.html`, html_con, function (err) {
     if (err) {
       return console.log(err);
     }
