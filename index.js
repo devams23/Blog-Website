@@ -9,8 +9,8 @@ const app = express();
 const port = 3000;
 const fs = writeFile;
 let contents = [];
-var d = new Date();
-var year = d.getFullYear();
+var da = new Date();
+var year = da.getFullYear();
 //var read = express.Router()
 
 app.use(bodyParser.urlencoded({ extended: true }));
