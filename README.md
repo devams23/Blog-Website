@@ -14,7 +14,7 @@ I invite each one of you to join me in this adventure. Share your thoughts, insi
 Below is the step-by-step instructions on how to install and set up my project.
 
 ```bash
-git clone https://github.com/sdevam6990/Blog-Website.git
+git clone https://github.com/devams23/Blog-Website.git
 cd Blog-Website
 npm install
 node index.js
