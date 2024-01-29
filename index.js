@@ -7,7 +7,7 @@ import pg from "pg";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
-const fs = writeFile;
+
 let contents = [];
 var d = new Date();
 var year = d.getFullYear();
@@ -17,8 +17,8 @@ var year = d.getFullYear();
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
-  database: "blogs",
-  password: "devam",
+  database: "your_db",
+  password: "your_password",
   port: 5432,
 });
 db.connect(); // ----------------------   CONNNECTING TO DATABASE ---------------
